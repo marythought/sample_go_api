@@ -39,9 +39,13 @@ func FilterShow(w http.ResponseWriter, r *http.Request) {
 }
 
 type Filter struct {
-	Name         string
-	CreatedTime  time.Time
-	ModifiedTime time.Time
+	FilterId     int       `json:"filterId"`
+	OrgId        int       `json:"orgId"`
+	Name         string    `json:"name"`
+	json         string    `json:"json"`
+	Type         int       `json:"type"`
+	CreatedTime  time.Time `json:"createdTime"`
+	ModifiedTime time.Time `json:"modifiedTime"`
 }
 
 type Filters []Filter
